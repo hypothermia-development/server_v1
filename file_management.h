@@ -17,13 +17,10 @@ be able to open program into folders (i.e starting directory)
 
 */
 
-int delete_file()
+void delete_file()
 {
-	std::cout << "Name a file to be deleted: "
-	cin >> file_name;
 	remove(file_name);
 	std::cout << "The respective file has been deleted.";
-	return 1;
 }
 
 int create_file()
