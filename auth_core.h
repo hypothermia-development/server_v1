@@ -15,7 +15,7 @@ bool hasAccess = false;
 
 int password = 1234;
 
-bool doLogin(int password, bool &didLogin, int &num_of_attempts_login)
+void doLogin(int password, bool &didLogin, int &num_of_attempts_login)
 {
     int guessed_password;
     std::cout << "Enter password: ";
@@ -24,13 +24,13 @@ bool doLogin(int password, bool &didLogin, int &num_of_attempts_login)
     if (password == guessed_password)
     {
         didLogin = true;
-        return didLogin;
+        
     }
     else
     {
         didLogin = false;
         num_of_attempts_login = num_of_attempts_login + 1;
-        return didLogin;
+        
     }
 }
 
